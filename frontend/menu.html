@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu – The Ice Cup</title>
+  <link rel="stylesheet" href="menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a class="nav-logo" href="index.html">🍦 The Ice Cup</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Orders.html">My Orders</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="toggleCart()">
+        🛒 Cart
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <button class="btn-login" onclick="openLogin()">Login</button>
+      <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="menu-hero">
+    <h1>Our <span>Sweet</span> Menu 🍨</h1>
+    <p>Handcrafted with love. Pick your favorite flavor and get it delivered fresh!</p>
+
+    <!-- SEARCH -->
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Search flavors..." oninput="filterMenu()" autocomplete="off"/>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="setFilter('all', this)">🍦 All</button>
+      <button class="filter-tab" onclick="setFilter('classic', this)">⭐ Classic</button>
+      <button class="filter-tab" onclick="setFilter('fruity', this)">🍓 Fruity</button>
+      <button class="filter-tab" onclick="setFilter('chocolate', this)">🍫 Chocolate</button>
+      <button class="filter-tab" onclick="setFilter('special', this)">✨ Special</button>
+      <button class="filter-tab" onclick="setFilter('vegan', this)">🌿 Vegan</button>
+    </div>
+  </div>
+
+  <!-- MENU GRID -->
+  <section class="menu-section">
+    <div class="section-title">🍦 All Flavors</div>
+    <div class="menu-grid" id="menu-grid">
+      <!-- Cards injected by JS -->
+      <div class="no-results" id="no-results">
+        <span>😢</span>
+        No flavors found. Try a different search!
+      </div>
+    </div>
+  </section>
+
+  <!-- CART OVERLAY + SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>🛒 Your Cart</h3>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items-list"></div>
+    <div class="cart-footer" id="cart-footer-section" style="display:none">
+      <p class="cart-count-info" id="cart-count-info"></p>
+      <div class="cart-total"><span>Total</span><span id="cart-total-price">₹0</span></div>
+      <button class="btn-checkout" onclick="checkout()">🎉 Place Order</button>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal-overlay" id="login-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeLogin()">✕</button>
+      <h3>Welcome Back 🍦</h3>
+      <input type="email" placeholder="Email address"/>
+      <input type="password" placeholder="Password"/>
+      <button class="modal-btn btn-primary" onclick="handleLogin()">Login</button>
+    </div>
+  </div>
+
+  <!-- NOTIFICATION -->
+  <div class="notification" id="notification"></div>
+
+  <script src="menu.js"></script>
+</body>
+</html>

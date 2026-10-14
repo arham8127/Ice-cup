@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login – The Ice Cup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a class="nav-logo" href="index.html">🍦 The Ice Cup</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="auth-main">
+
+    <!-- LEFT PANEL -->
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <div class="brand-logo">🍦</div>
+        <h1>Welcome Back!</h1>
+        <p>Sign in to your account and enjoy exclusive offers, track your orders, and more.</p>
+        <div class="feature-list">
+          <div class="feature-item"><span>🎁</span> Exclusive member offers</div>
+          <div class="feature-item"><span>📦</span> Track your orders</div>
+          <div class="feature-item"><span>⭐</span> Save your favorites</div>
+          <div class="feature-item"><span>🚀</span> Faster checkout</div>
+        </div>
+        <div class="auth-switch-text">
+          Don't have an account?
+          <a href="signup.html">Sign Up →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Login to your account</h2>
+        <p class="auth-subtitle">Enter your credentials to continue</p>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <div class="input-wrap">
+            <span class="input-icon">✉️</span>
+            <input type="email" id="email" placeholder="Enter your email"/>
+          </div>
+          <span class="error-msg" id="email-error">Please enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="password" placeholder="Enter your password" id="password"/>
+            <button class="toggle-pass" onclick="togglePassword('password', this)">👁️</button>
+          </div>
+          <span class="error-msg" id="password-error">Password must be at least 6 characters</span>
+        </div>
+
+        <div class="form-row">
+          <label class="checkbox-wrap">
+            <input type="checkbox" id="remember"/>
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button class="btn-submit" onclick="handleLogin()">
+          <span id="login-btn-text">Login →</span>
+        </button>
+
+        <div class="divider"><span>or continue with</span></div>
+
+        <button class="btn-google" onclick="handleGoogle()">
+          <span>🌐</span> Continue with Google
+        </button>
+
+        <p class="switch-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="notification" id="notification"></div>
+  <script src="login.js"></script>
+</body>
+</html>

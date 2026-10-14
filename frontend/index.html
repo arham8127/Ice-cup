@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Ice Cup</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a class="nav-logo" href="#home"><span>🍦</span> The Ice Cup</a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#stats">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Orders.html">My Orders</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="toggleCart()">
+        🛒 Cart
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <button class="btn-login" onclick="window.location.href='login.html'">Login</button>
+      <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-content">
+      <div class="hero-card">
+        <h1>Scoop Up<br><span>Happiness</span> 🍨</h1>
+        <p>Handcrafted ice cream made with love, premium ingredients, and a sprinkle of magic.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="scrollTo('#stats')">Explore Flavors</button>
+          <button class="btn-outline" onclick="window.location.href='menu.html'">View Menu</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>50+</strong><span>Flavors</span></div>
+          <div class="hero-stat"><strong>100%</strong><span>Natural</span></div>
+          <div class="hero-stat"><strong>10K+</strong><span>Happy Customers</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-blob"></div>
+      <div class="ice-cream-side1">🍫</div>
+      <div class="ice-cream-main">🍦</div>
+      <div class="ice-cream-side2">🍧</div>
+      <div class="ice-cream-side3">🍡</div>
+    </div>
+  </section>
+
+  <!-- STATS + FEATURES -->
+  <section id="stats">
+    <div class="scroll-indicator">↓ Scroll</div>
+    <div class="stats-row">
+      <div class="stat-item"><strong>50+</strong><span>Unique Flavors</span></div>
+      <div class="stat-item"><strong>100%</strong><span>Natural</span></div>
+      <div class="stat-item"><strong>10K+</strong><span>Happy Customers</span></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fce4ec;">🌿</div>
+        <h3>100% Natural</h3>
+        <p>Made with fresh, organic ingredients</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#e3f2fd;">🏆</div>
+        <h3>Award Winning</h3>
+        <p>Recognized for excellence</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#f3e5f5;">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Quick delivery to your doorstep</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#e8f5e9;">❤️</div>
+        <h3>Made with Love</h3>
+        <p>Crafted with passion daily</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / DARK -->
+  <section id="about">
+    <div class="about-image-wrap">
+      <div class="about-image-card">
+        <div class="big-emoji">🏪</div>
+        <p>designed with ❤️ for ice cream lovers</p>
+      </div>
+    </div>
+    <div class="about-content">
+      <h2>Our Sweet Story</h2>
+      <p>Since 2025, The Ice Cup has been serving happiness one scoop at a time. What started as a small family dream has grown into the community's favorite ice cream destination.</p>
+      <p>We believe in using only the finest ingredients — fresh cream, real fruits, and premium chocolates. Every batch is made fresh daily with love and care.</p>
+      <div class="about-stats-grid">
+        <div class="about-stat-card"><strong>10,000+</strong><span>Happy Customers</span></div>
+        <div class="about-stat-card"><strong>4.9/5</strong><span>Average Rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <p class="subtitle">Real reviews from real ice cream lovers</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The best ice cream I've ever had! The strawberry bliss is absolutely divine."</blockquote>
+        <div class="reviewer"><strong>Karan Singh</strong><span>Regular Customer</span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Amazing flavors and quality. My kids love the chocolate dream!"</blockquote>
+        <div class="reviewer"><strong>Virat Gurjar</strong><span>Family Man</span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"This place is a gem! Incredible flavors and such a warm atmosphere."</blockquote>
+        <div class="reviewer"><strong>Arham Khan</strong><span>Food Blogger</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <h2>Ready to Experience Pure Joy?</h2>
+    <p>Visit us today and discover why we're the neighborhood's favorite ice cream parlour.<br>Your taste buds will thank you!</p>
+    <div class="cta-btns">
+  <div class="cta-btn-wrap">
+    <button class="cta-btn" onclick="togglePopup('map-popup')">📍 Find Us</button>
+    <div class="cta-popup" id="map-popup">
+      <div class="popup-inner">
+        <h4>📍 Find Us</h4>
+        <div class="popup-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.9!2d80.9462!3d26.8467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sHazratganj%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="100%" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p class="popup-addr">📍 123 Sweet Street, Hazratganj, Lucknow</p>
+        <a href="https://maps.google.com/?q=Hazratganj,Lucknow" target="_blank" class="popup-link">Open in Google Maps →</a>
+      </div>
+    </div>
+  </div>
+  <div class="cta-btn-wrap">
+    <button class="cta-btn-outline" onclick="togglePopup('call-popup')">📞 Call Now</button>
+    <div class="cta-popup" id="call-popup">
+      <div class="popup-inner">
+        <h4>📞 Contact Us</h4>
+        <div class="popup-contact-row"><span class="popup-icon">📱</span><div><p class="popup-label">Phone</p><p class="popup-value">+91 70073 77281</p></div></div>
+        <div class="popup-contact-row"><span class="popup-icon">✉️</span><div><p class="popup-label">Email</p><p class="popup-value">hello@theicecup.in</p></div></div>
+        <div class="popup-contact-row"><span class="popup-icon">🕐</span><div><p class="popup-label">Hours</p><p class="popup-value">Mon–Sun: 10AM – 10PM</p></div></div>
+        <a href="tel:+917007377281" class="popup-link">Tap to Call →</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="newsletter-icon">✉️</div>
+    <h2>Join Our Sweet Community</h2>
+    <p>Subscribe to get exclusive offers, new flavor alerts, and special birthday treats!</p>
+    <div class="newsletter-form">
+      <input type="email" id="email-input" placeholder="Enter your email address" />
+      <button onclick="handleSubscribe()">Subscribe Now</button>
+    </div>
+    <p class="privacy">We respect your privacy. Unsubscribe anytime.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text">🍦 The Ice Cup</div>
+        <p>Crafted desserts. Chilled perfection in every scoop.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#stats">Menu</a>
+        <a href="#about">About</a>
+        <a href="#newsletter">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>hello@theicecup.in</p>
+        <p>+91 70073 77281</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a class="social-btn" href="#" title="Instagram">🅾</a>
+          <a class="social-btn" href="#" title="Twitter">X</a>
+          <a class="social-btn" href="#" title="Facebook">f</a>
+          <a class="social-btn" href="#" title="Email">@</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 The Ice Cup. All rights reserved. Made with 🍦 and love.</div>
+  </footer>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal-overlay" id="login-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeLogin()">✕</button>
+      <h3>Welcome Back 🍦</h3>
+      <input type="email" placeholder="Email address" />
+      <input type="password" placeholder="Password" />
+      <button class="btn-primary" onclick="handleLogin()">Login</button>
+    </div>
+  </div>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>🛒 Your Cart</h3>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">
+        <span>🍦</span>
+        Your cart is empty.<br>Add some sweet treats!
+      </div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="cart-total"><span>Total</span><span id="cart-total">₹0</span></div>
+      <button class="btn-checkout" onclick="placeOrder()">🎉 Place Order</button>
+    </div>
+  </div>
+
+  <!-- NOTIFICATION -->
+  <div class="notification" id="notification"></div>
+<script src="script.js"></script>
+</body>
+</html>

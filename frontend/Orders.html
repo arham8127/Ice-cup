@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Orders – The Ice Cup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="orders.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a class="nav-logo" href="index.html">🍦 The Ice Cup</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-cart" onclick="window.location.href='menu.html'">🛒 Cart</button>
+      <button class="btn-login" id="nav-login-btn" onclick="window.location.href='login.html'">Login</button>
+      <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="orders-hero">
+    <h1>My <span>Orders</span> 📦</h1>
+    <p>Track all your past orders and their status.</p>
+  </div>
+
+  <!-- ORDERS SECTION -->
+  <section class="orders-section">
+
+    <!-- STATS ROW -->
+    <div class="orders-stats" id="orders-stats" style="display:none">
+      <div class="stat-card">
+        <strong id="total-orders">0</strong>
+        <span>Total Orders</span>
+      </div>
+      <div class="stat-card">
+        <strong id="total-spent">₹0</strong>
+        <span>Total Spent</span>
+      </div>
+      <div class="stat-card">
+        <strong id="total-items">0</strong>
+        <span>Items Ordered</span>
+      </div>
+    </div>
+
+    <!-- LOADING -->
+    <div class="loading-wrap" id="loading">
+      <div class="spinner"></div>
+      <p>Loading your orders...</p>
+    </div>
+
+    <!-- NOT LOGGED IN -->
+    <div class="empty-state" id="not-logged-in" style="display:none">
+      <span>🔒</span>
+      <h3>Please Login First</h3>
+      <p>You need to login to view your orders.</p>
+      <a href="login.html" class="btn-primary">Login Now →</a>
+    </div>
+
+    <!-- NO ORDERS -->
+    <div class="empty-state" id="no-orders" style="display:none">
+      <span>🍦</span>
+      <h3>No Orders Yet</h3>
+      <p>You haven't placed any orders yet. Go explore our menu!</p>
+      <a href="menu.html" class="btn-primary">Browse Menu →</a>
+    </div>
+
+    <!-- ORDERS LIST -->
+    <div id="orders-list"></div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-bottom">© 2025 The Ice Cup. All rights reserved. Made with 🍦 and love.</div>
+  </footer>
+
+  <div class="notification" id="notification"></div>
+  <script src="orders.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up – The Ice Cup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a class="nav-logo" href="index.html">🍦 The Ice Cup</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="auth-main">
+
+    <!-- LEFT PANEL -->
+    <div class="auth-left">
+      <div class="auth-left-content">
+        <div class="brand-logo">🍦</div>
+        <h1>Join The Ice Cup Family!</h1>
+        <p>Create your account today and start enjoying exclusive member benefits.</p>
+        <div class="feature-list">
+          <div class="feature-item"><span>🎂</span> Birthday surprise treats</div>
+          <div class="feature-item"><span>🎁</span> Members-only discounts</div>
+          <div class="feature-item"><span>🔔</span> New flavor alerts</div>
+          <div class="feature-item"><span>💳</span> Loyalty rewards program</div>
+        </div>
+        <div class="auth-switch-text">
+          Already have an account?
+          <a href="login.html">Login →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="auth-right">
+      <div class="auth-card">
+        <h2>Create your account</h2>
+        <p class="auth-subtitle">Fill in your details to get started</p>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label>First Name</label>
+            <div class="input-wrap">
+              <span class="input-icon">👤</span>
+              <input type="text" id="fname" placeholder="First name"/>
+            </div>
+            <span class="error-msg" id="fname-error">Required</span>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <div class="input-wrap">
+              <span class="input-icon">👤</span>
+              <input type="text" id="lname" placeholder="Last name"/>
+            </div>
+            <span class="error-msg" id="lname-error">Required</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <div class="input-wrap">
+            <span class="input-icon">✉️</span>
+            <input type="email" id="email" placeholder="Enter your email"/>
+          </div>
+          <span class="error-msg" id="email-error">Please enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number</label>
+          <div class="input-wrap">
+            <span class="input-icon">📱</span>
+            <input type="tel" id="phone" placeholder="+91 00000 00000"/>
+          </div>
+          <span class="error-msg" id="phone-error">Please enter a valid phone number</span>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="password" placeholder="Min. 6 characters"/>
+            <button class="toggle-pass" onclick="togglePassword('password', this)">👁️</button>
+          </div>
+          <span class="error-msg" id="password-error">Password must be at least 6 characters</span>
+          <div class="password-strength" id="strength-bar">
+            <div class="strength-fill" id="strength-fill"></div>
+          </div>
+          <span class="strength-label" id="strength-label"></span>
+        </div>
+
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="confirm-password" placeholder="Re-enter password"/>
+            <button class="toggle-pass" onclick="togglePassword('confirm-password', this)">👁️</button>
+          </div>
+          <span class="error-msg" id="confirm-error">Passwords do not match</span>
+        </div>
+
+        <label class="checkbox-wrap terms-wrap">
+          <input type="checkbox" id="terms"/>
+          <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+        </label>
+        <span class="error-msg" id="terms-error">Please accept the terms</span>
+
+        <button class="btn-submit" onclick="handleSignup()">
+          <span id="signup-btn-text">Create Account →</span>
+        </button>
+
+        <div class="divider"><span>or continue with</span></div>
+
+        <button class="btn-google" onclick="handleGoogle()">
+          <span>🌐</span> Continue with Google
+        </button>
+
+        <p class="switch-link">Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="notification" id="notification"></div>
+  <script src="login.js"></script>
+</body>
+</html>
