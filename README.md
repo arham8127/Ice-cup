@@ -75,9 +75,6 @@ Ice-cup/
 - Keeping token names consistent across many frontend files
 - Testing each feature by running it, instead of trusting code that only looks correct
 
-## Screenshots
-
-> Add 2 or 3 screenshots here (home page, cart, orders).
 
 ## Author
 
